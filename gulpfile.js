@@ -20,7 +20,7 @@ gulp.task("copy:libs", gulp.series("clean:libs", function () {
         .pipe(gulp.dest("./wwwroot/lib/js/jquery/dist/"));
 
     // Popper.js
-    var popperJs = gulp.src(paths.node_modules + "popper.js/dist/*.js")
+    var popperJs = gulp.src(paths.node_modules + "popper.js/dist/umd/*.js")
         .pipe(gulp.dest("./wwwroot/lib/js/popper.js/dist/"));
 
     // Bootstrap JS
