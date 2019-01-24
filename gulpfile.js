@@ -40,7 +40,7 @@ gulp.task("copy:libs", gulp.series("clean:libs", function () {
 
     // Font Awesome Fonts
     var fontAwesomeFont = gulp.src(paths.node_modules + "font-awesome/fonts/*.*")
-        .pipe(gulp.dest("./wwwroot/lib/fonts/font-awesome/dist/"));
+        .pipe(gulp.dest("./wwwroot/lib/css/font-awesome/fonts/"));
 
     return merge(jQuery, popperJs, bootstrapJs, bootstrapCss, fontAwesomeCss, fontAwesomeFont);
 }));
