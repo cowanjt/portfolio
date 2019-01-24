@@ -26,18 +26,21 @@ gulp.task("copy:libs", gulp.series("clean:libs", function () {
     // Bootstrap JS
     var bootstrapJs = gulp.src([paths.node_modules + "bootstrap/dist/js/bootstrap.js",
     paths.node_modules + "bootstrap/dist/js/bootstrap.min.js"
-    ])
-        .pipe(gulp.dest("./wwwroot/lib/js/bootstrap/dist/"));
+    ]).pipe(gulp.dest("./wwwroot/lib/js/bootstrap/dist/"));
 
     // Bootstrap CSS
     var bootstrapCss = gulp.src([paths.node_modules + "bootstrap/dist/css/bootstrap.css",
     paths.node_modules + "bootstrap/dist/css/bootstrap.min.css"])
         .pipe(gulp.dest("./wwwroot/lib/css/bootstrap/dist/"));
 
-    // Font Awesome
-    var fontAwesome = gulp.src([paths.node_modules + "font-awesome/css/font-awesome.css", 
-        paths.node_modules + "font-awesome/css/font-awesome.min.css"])
+    // Font Awesome CSS
+    var fontAwesomeCss = gulp.src([paths.node_modules + "font-awesome/css/font-awesome.css",
+    paths.node_modules + "font-awesome/css/font-awesome.min.css"])
         .pipe(gulp.dest("./wwwroot/lib/css/font-awesome/dist/"));
 
-    return merge(jQuery, popperJs, bootstrapJs, bootstrapCss, fontAwesome);
+    // Font Awesome Fonts
+    var fontAwesomeFont = gulp.src(paths.node_modules + "font-awesome/fonts/*.*")
+        .pipe(gulp.dest("./wwwroot/lib/fonts/font-awesome/dist/"));
+
+    return merge(jQuery, popperJs, bootstrapJs, bootstrapCss, fontAwesomeCss, fontAwesomeFont);
 }));
