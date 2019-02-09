@@ -15,7 +15,6 @@ myApp.directive('whenVisible', function() {
         var raw = elm[0];
         $(window).scroll(function(){
             if (isScrolledIntoView(elm)) {
-                //console.log("in view!!" + scope.busy);
                 elm.addClass("animated");
                 
                 if (!scope.busy){
@@ -47,46 +46,11 @@ myApp.controller('mainCtrl', function Main($scope, $http){
          
          $scope.items = [
             {
-                url: "http://bootply.com",
-                title: "Bootply",
-                desc: "Bootply is a playground for the popular Bootstrap framework that I wrote back in 2013. It's a HTML/CSS/JS editor with Bootstap built-in.",
-                imgThumb: "http://i.imgur.com/1BB5M91.png",
-				tags: ["nodejs","express","heroku","mongo-db","jquery","javascript","css"]
-            },
-            {
-                url: "http://codeply.com",
-                title: "Codeply",
-                desc: "Codeply is a frontend editor and responsive design playground. It's a great testing and prototyping tool with various responsive frameworks built-in.",
-                imgThumb: "http://i.imgur.com/xNtumWJ.png",
-				tags: ["nodejs","angularjs","mongo-db","javascript","css","parse-server"]
-            },
-            {
-                url: "http://theme.cards",
-                title: "Theme.cards",
-                desc: "Theme cards is a curation of the best free templates and themes from around the Web.",
-                imgThumb: "http://i.imgur.com/l7VfYiE.png",
-				tags: ["nodejs","angularjs","mongo-db","javascript","css","parse-server"]
-            },
-            {
-                url: "http://wdstack.com",
-                title: "WDstack",
-                desc: "WDStack is a curation of the best in Web development & design. WDStack resources are organized in collections, and stacked by popularity so it's easy to find the stuff you really want.",
-                imgThumb: "http://i.imgur.com/WJ9ksai.png",
-				tags: ["nodejs","angularjs","phantomjs","javascript","css","parse-server","mongo-db"]
-            },
-            {
-                url: "http://templatestash.com",
-                title: "Template Stash",
-                desc: "Template Stash is a growing curation with 50 templates organized and searchable by category, keywords, provider or framework. There are also specific collections that are grouped by various design trends such as flat, material design and color pallette.",
-                imgThumb: "http://i.imgur.com/xqxJkCa.png",
-				tags: ["nodejs","angularjs","mongo-db","javascript","css","parse-server"]
-            },
-            {
-                url: "http://bootstrap4.guide",
-                title: "Bootstrap 4 Guide",
-                desc: "I'm really excited about the next Bootstrap. This theme I developed as a demonstration of the some of the new features including flexbox and cards.",
-                imgThumb: "http://i.imgur.com/iTSX2uf.png",
-				tags: ["bootstrap","javascript","css-3","flexbox"]
+                url: "https://dnrweb.state.co.us/cdss",
+                title: "Colorado Decision Support System - Data & Tools",
+                desc: "The Colorado Decision Support System helps DWR administer and manage water across the State of Colorado.",
+                imgThumb: "#",
+				tags: ["ASP.NET MVC 5","CSS","JavaScript","jQuery","T-SQL"]
             }
         ];
 
