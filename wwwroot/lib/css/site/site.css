@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,700,800');
+
+html,
+body {
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	font-family: 'Work Sans', sans-serif;
+}
+
+h1,h2,h3 {
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.arrows {
+  position: fixed;
+  bottom: 20px;
+  right: 2%;
+  z-index: 50;
+}
+
+.arrows a, .upArrow {
+    color: rgba(220,220,220,0.7);
+}
+
+main.container {
+	width: 100%;
+	max-width: 100%;
+}
+
+.pages {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	min-height: 100%;
+	min-height: 100vh;
+	visibility: hidden;
+	z-index: 1;
+	background: #fff;
+}
+
+.page.active:before {
+    display: block;
+    position: absolute;
+    content: '';
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	min-height: 100%;
+	min-height: 100vh;
+	z-index: 0;
+	background-color: transparent;
+	transition: all 0.1s 0.1s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.page.prev {
+	visibility: hidden;
+	position: static;
+}
+
+.page.active {
+	visibility: visible;
+	position: relative;
+	z-index: 5;
+	opacity: 1;
+    transition: visibility 0s linear 0s, opacity .4s 0s;
+}
+
+.page.fixed {
+    position: relative;
+	visibility: visible;
+	z-index: 2;
+	opacity: 1;
+}
+
+
+/* do the fixed layer scrolly thing only on non-mobile */
+@media (min-width:400px) {
+    .page.fixed {
+    	position: fixed;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+	min-height: 100vh; /* slighlty bigger to force scroll! */
+}
+
+.footer > .row {
+    margin-bottom:0;
+}
+
+
+/* non functional styles */
+.page {
+	padding: 2em;
+	box-shadow: 0 1px 2px rgba(2,2,2,0.4);
+}
+
+/* utils */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ucase {
+    text-transform:uppercase;
+}
+
+.thin {
+    font-weight:100;
+}
+
+.wide {
+    letter-spacing: 2px;
+}
+.huge {
+    font-size: 5.8rem;
+    letter-spacing: -3px;
+}
+@media (max-width: 500px) {
+    .huge {
+        font-size: 3.2rem;
+    }
+}
+
+.bg {
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:top center;
+}
+
+.bg4 {
+    background-image:url(https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=f0838793fa6241b4c97b9c9a0e3ca47a);
+}
+
+.bg5 {
+    background-image:url(https://images.unsplash.com/photo-1462530260150-162092dbf011?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=81aa55bc828cc53709eabbdc02a3ff1d);
+}
+
+.bg7 {
+    background-image:url(https://images.unsplash.com/photo-1460533893735-45cea2212645?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925);
+}
+
+.bg8 {
+    background-image:url(https://images.unsplash.com/photo-1417353783325-14cb8f9ba1dd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=aeb8522c0ee11fb1c1ee526511418d18);
+}
+.bg9 {
+    background-image:url(https://images.unsplash.com/photo-1453671424686-dfef17039343?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=fbb5743aa7c904b49dcb3f57e7d00c22);
+}
+
+.grey-1 {
+    background: #7b7b7b;
+}
+
+.grey-2 {
+    background: #4f5051;
+}
