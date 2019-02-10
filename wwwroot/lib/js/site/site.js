@@ -37,22 +37,22 @@ myApp.filter('random', function(len){
 });
 myApp.controller('mainCtrl', function Main($scope, $http){
   
-    $scope.itemsPerPage = 20;     //infinite scroll page size - items in each page before showing via inifinite scroll
+    $scope.itemsPerPage = 20;     //infinite scroll page size - items in each page before showing via infinite scroll
     $scope.itemsFromServer = 80;  //server page size - how many to get when reload from server
     $scope.colors = ["pink","blue","lime","orange","cyan","purple","amber","indigo","green"];
   
     $scope.getData = function(startAt,count){
          $scope.items = $scope.items||[];
          
-         $scope.items = [
-            {
-                url: "https://dnrweb.state.co.us/cdss",
-                title: "Colorado Decision Support System - Data & Tools",
-                desc: "The Colorado Decision Support System helps DWR administer and manage water across the State of Colorado.",
-                imgThumb: "#",
-				tags: ["ASP.NET MVC 5","CSS","JavaScript","jQuery","T-SQL"]
-            }
-        ];
+        //  $scope.items = [
+        //     {
+        //         url: "https://dnrweb.state.co.us/cdss",
+        //         title: "Colorado Decision Support System - Data & Tools",
+        //         desc: "The Colorado Decision Support System helps DWR administer and manage water across the State of Colorado.",
+        //         imgThumb: "http://i.imgur.com/1BB5M91.png",
+		// 		tags: ["ASP.NET MVC 5","CSS","JavaScript","jQuery","T-SQL"]
+        //     }
+        // ];
 
          $scope.lastIndex = $scope.items.length;
          $scope.loading = false;
