@@ -38,8 +38,8 @@ myApp.filter('random', function(len){
 myApp.controller('mainCtrl', function Main($scope, $http){
   
     $scope.itemsPerPage = 20;     //infinite scroll page size - items in each page before showing via infinite scroll
-    $scope.itemsFromServer = 80;  //server page size - how many to get when reload from server
-    $scope.colors = ["pink","blue","lime","orange","cyan","purple","amber","indigo","green"];
+    $scope.itemsFromServer = 90;  //server page size - how many to get when reload from server
+    $scope.colors = ["pink","blue","lime","orange","cyan","purple","amber","indigo","green", "", ""];
   
     $scope.getData = function(startAt,count){
          $scope.items = $scope.items||[];
@@ -91,7 +91,7 @@ myApp.controller('mainCtrl', function Main($scope, $http){
     $scope.needToLoadMore = false;
     $scope.getData(0,$scope.itemsFromServer);
     $scope.currentPage = 1;
-    $scope.pageIndex = 24;       //items to show initially
+    $scope.pageIndex = 26;       //items to show initially
  
 });
 
@@ -116,10 +116,12 @@ $(document).ready(function(){
             
             // downscroll code
             if (typeof next!="undefined" && atBottom(curr[0])) {
+                //console.log("Before page down. Condition was true");
                 changeActivePageDown(curr,next);
             }
             else {
                 // last page
+                //console.log("Before page down. Condition was false");
                 curr.removeClass("fixed");
             }
             
@@ -199,8 +201,8 @@ $(document).ready(function(){
 });
 
 function changeActivePageDown(curr,next) {
-    // console.log("Current Page " + curr);
-    // console.log("Current Next " + next);
+    //console.log("Current Page " + $(curr));
+    //console.log("Current Next " + $(next));
     curr.removeClass("active").addClass("prev");
     if (next) {
         next.addClass("active").addClass("wait").removeClass("fixed");
