@@ -199,6 +199,8 @@ $(document).ready(function(){
 });
 
 function changeActivePageDown(curr,next) {
+    // console.log("Current Page " + curr);
+    // console.log("Current Next " + next);
     curr.removeClass("active").addClass("prev");
     if (next) {
         next.addClass("active").addClass("wait").removeClass("fixed");
