@@ -116,12 +116,10 @@ $(document).ready(function(){
             
             // downscroll code
             if (typeof next!="undefined" && atBottom(curr[0])) {
-                //console.log("Before page down. Condition was true");
                 changeActivePageDown(curr,next);
             }
             else {
                 // last page
-                //console.log("Before page down. Condition was false");
                 curr.removeClass("fixed");
             }
             
@@ -163,7 +161,7 @@ $(document).ready(function(){
         } else {
             $('.arrows').removeClass("hide");
         }
-    
+
         lastScrollTop = st;
         return;
     });
@@ -201,8 +199,6 @@ $(document).ready(function(){
 });
 
 function changeActivePageDown(curr,next) {
-    //console.log("Current Page " + $(curr));
-    //console.log("Current Next " + $(next));
     curr.removeClass("active").addClass("prev");
     if (next) {
         next.addClass("active").addClass("wait").removeClass("fixed");
