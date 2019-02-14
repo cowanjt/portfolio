@@ -228,6 +228,8 @@ function atTop(ele) {
     return false;
 }
 
+
+// Lazy load images - img
 document.addEventListener("DOMContentLoaded", function() {
     var lazyloadImages;    
   
